@@ -1,6 +1,7 @@
 node('master') {
     stage("Fetch Source Code") {
         git 'https://github.com/TrainingByPackt/Beginning-Jenkins.git'
+        sh 'apk add make python pip'
     }
     
     dir('Lesson5/ActivityA') {
